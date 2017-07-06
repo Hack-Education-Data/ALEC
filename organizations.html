@@ -1,0 +1,20 @@
+---
+layout: default
+title: ALEC Members
+---
+
+<!-- Organizations -->
+{% assign organizations = site.data.organizations %}
+{% assign organizations = organizations | sort:"Name" %}
+
+<!-- Document -->
+
+{% for organization in organizations %}
+
+<ul>
+<li><strong>{{ organization.Name }}</strong> (Membership Status: {{ organization.Status }})</li>
+</ul>
+
+<hr >
+{% endfor %}
+

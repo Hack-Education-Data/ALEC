@@ -1,0 +1,19 @@
+---
+layout: default
+title: People Involved in ALEC
+---
+
+<!-- People -->
+{% assign people = site.data.people %}
+{% assign people = people | sort:"Name" %}
+
+<!-- Document -->
+
+{% for person in people %}
+
+<p><strong>{{ person.Name }}</strong>, {{ person.Affiliation }}</p> 
+<p> Role at ALEC: {{ person.Role }} (Membership Status: {{ person.Status }})</p>
+
+<hr >
+{% endfor %}
+
